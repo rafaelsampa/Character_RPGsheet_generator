@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class fichaDePersonagem {
     String nomeDoJogador, nomeDoPersonagem, classe, raca, antecedentes;
     int nivel, FOR, DES, CON, INT, SAB, CAR;
-
+    
     public fichaDePersonagem(){
     
     }

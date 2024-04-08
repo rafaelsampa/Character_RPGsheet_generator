@@ -39,7 +39,7 @@ public class mainCode {
         do{
             System.out.println("Digite o número da opção que deseja:");
             System.out.println("\t1 - Criar uma nova ficha de personagem");
-            System.out.println("\t2 - Carregar e/ou Alterar uma ficha de personagem");
+            System.out.println("\t2 - Carregar e/ou Alterar uma ficha de personagem"); // NAO
             System.out.println("\t3 - Mostrar uma ficha de personagem");
             System.out.println("\t0 - Sair");
 
@@ -52,8 +52,10 @@ public class mainCode {
                     ficha.setInfoDoPersonagem();
                     System.out.println("\n\nAs Informações do personagem foram salvas com sucesso!");
                     ficha.setAtributos();
+                    System.out.println("\n\nOs Atributos do personagem foram salvos com sucesso!");
+                    System.out.println("Modificadores Parte 1  - Implementacões dos modfs de Raca, Antecedente, Classe")
+                    checkRaca(ficha.raca);
                     
-
                     
                     
                     break;
