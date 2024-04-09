@@ -1,5 +1,6 @@
 # **Gerador de Ficha de Personagem RPG**
 
+Data de começo desse projeto 01 abril 2024 (Provavelmente)
 ## **Gerador 0.1**
 
 **Motivo & Proposito**
