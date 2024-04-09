@@ -17,10 +17,10 @@ _Não sei se vai dar certo mais pelo menos é mais divertido que fazer uma conta
 
 ### Por enquanto **explorar** e **aprender** algumas das funcionalidades do:
 
-- **JFrame, JLabel, JPanel** - 20%
+- **JFrame, JLabel, JPanel** - 10%
 - **Java.io** - 10%
 - **Uma interface gráfica GUI**
-- **Java Swing** - 20%
+- **Java Swing** - 10%
 
 
 ## **Gerador 0.2**
@@ -31,8 +31,12 @@ primeiro um gerador "ordinário" que facilita o jogador a fazer uma ficha, mas p
 dados necessarios inseridos o gerador cria um arquivo .txt da ficha para o usuario, e assim será, pelo menos para esse gerador 0.2.
 
 ### Por enquanto preciso implementar :
-- Um maneira de conectar todas os objetos
-- Uma maneira do jogador conseguir escolher quais pericias ou atributos alterar
-- Uma maneira de organizar as habilidades*
-- ? com certeza tem mais coisas
+1. Um maneira de conectar todos os objetos
+2. Uma maneira do jogador conseguir escolher quais pericias ou atributos alterar
+3. Uma maneira de organizar as habilidades*
+4. Objetos para representar: Raças, Classes e Antecedentes. Com seus respectivos modificadores e pericias a serem escolhidas
+   (Usando o ponto 3.)
+5. Maneira de gerar o arquivo .txt com os dados armazenados. Sendo com um Design minimamente amigavel.
+6. 
+
 
