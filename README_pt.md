@@ -49,5 +49,6 @@ disciplina.
 
 Por enquanto não vou colocar uma lista aqui de lista das implementações que precisam ser feitas, pois acho dificil ficar atualizando
 algo que virou um projeto com entregas semanais com a disciplina. Logo, por enquanto as coisas vão ficar em hiato(pausa) pelo README.md
-13 de abril de 2024
+
+**última entrega por enquanto 13 de abril de 2024**
 
