@@ -38,6 +38,16 @@ dados necessarios inseridos o gerador cria um arquivo .txt da ficha para o usuar
 4. Objetos para representar: Raças, Classes e Antecedentes. Com seus respectivos modificadores e pericias a serem escolhidas
    (Usando o ponto 3.)
 5. Maneira de gerar o arquivo .txt com os dados armazenados. Sendo com um Design minimamente amigavel.
-6. 
 
+
+## **Gerador 0.3**
+
+Esse é o Gerador 0.3, porém apesar dele tem um próposito igual, tem uma finalidade diferente. Comecei esse novo arquivo 0.3 pois 
+surgiu uma oportunidade de fazer esse projeto pessoal juntamente com uma entrega de projeto também para a disciplina de universidade 
+de POO. Aqui será o arquivo oficial que ao ser finalizadao será entregue a professora no final do semestre, que é o projeto final da
+disciplina.
+
+Por enquanto não vou colocar uma lista aqui de lista das implementações que precisam ser feitas, pois acho dificil ficar atualizando
+algo que virou um projeto com entregas semanais com a disciplina. Logo, por enquanto as coisas vão ficar em hiato(pausa) pelo README.md
+13 de abril de 2024
 
