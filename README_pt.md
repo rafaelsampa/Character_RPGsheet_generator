@@ -32,11 +32,11 @@ primeiro um gerador "ordinário" que facilita o jogador a fazer uma ficha, mas p
 dados necessarios inseridos o gerador cria um arquivo .txt da ficha para o usuario, e assim será, pelo menos para esse gerador 0.2.
 
 ### Por enquanto preciso implementar :
-1. Um maneira de conectar todos os objetos
+1. Um maneira de conectar todos os objetos DONE
 2. Uma maneira do jogador conseguir escolher quais pericias ou atributos alterar
 3. Uma maneira de organizar as habilidades*
 4. Objetos para representar: Raças, Classes e Antecedentes. Com seus respectivos modificadores e pericias a serem escolhidas
-   (Usando o ponto 3.)
+   (Usando o ponto 3.) DONE
 5. Maneira de gerar o arquivo .txt com os dados armazenados. Sendo com um Design minimamente amigavel.
 
 
@@ -47,8 +47,9 @@ surgiu uma oportunidade de fazer esse projeto pessoal juntamente com uma entrega
 de POO. Aqui será o arquivo oficial que ao ser finalizadao será entregue a professora no final do semestre, que é o projeto final da
 disciplina.
 
-Por enquanto não vou colocar uma lista aqui de lista das implementações que precisam ser feitas, pois acho dificil ficar atualizando
-algo que virou um projeto com entregas semanais com a disciplina. Logo, por enquanto as coisas vão ficar em hiato(pausa) pelo README.md
 
-**última entrega por enquanto 13 de abril de 2024**
-
+### Por enquanto preciso implementar :
+1. Escolha de perícias
+2. Listagem de habilidades
+3. Lista de magias
+4. Acabar declarações as especificações das Racas, Classes e Antecedentes.
