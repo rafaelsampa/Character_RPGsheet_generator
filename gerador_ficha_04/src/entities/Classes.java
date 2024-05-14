@@ -1,6 +1,6 @@
+package entities;
 
-
-public class classes {
+public class Classes {
     // uma classe de classes vai ser realmente util? 
 
     // Ou a gente essa class de Classes e cria varias que "extends" ela, com o conceito de hierarquia...

@@ -1,12 +1,11 @@
-
-
+package model;
 
 //import java.util.Random;
 
-public class fichaDePersonagem {
-    String nomeDoJogador, nomeDoPersonagem, classe, raca, antecedentes;
-    int nivel, FOR, DES, CON, INT, SAB, CAR;
-    boolean[] pericias = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
+public class FichaModel {
+    private String nomeDoJogador, nomeDoPersonagem, classe, raca, antecedentes;
+    private int nivel, FOR, DES, CON, INT, SAB, CAR;
+    private boolean[] pericias = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
     // 0 - Acrobacia(DES)
     // 1 - Arcanismo(INT)
     // 2 - Atletismo(FOR)
@@ -25,12 +24,61 @@ public class fichaDePersonagem {
     // 15 - Prestidigitação(DES)
     // 16 - Religião(INT)
     // 17 - Sobrevivência(SAB)
+    private int pontosdevida, dadoVida, modAtributos;
+    private boolean profArmasSimples;
+    private boolean profArmasMarciais;
+    private boolean profArmaduras;
+    private boolean profEscudos;
+    private boolean profFerramentas;
+    private boolean tstFOR, tstCON;
+    private double deslocamento;
+    private String[] magicas;
+    private String[] truques;
+    private String[] habilidades;
 
-    int PVs; // Pontos de vida
+
     
     
-    public fichaDePersonagem(){ // Construtor padrão, com todas as variaveis.
+    public FichaModel(){ // Construtor padrão, com todas as variaveis.
         
+    }
+
+    public void setAnao() {
+        this.CON = this.CON + 2;
+        this.deslocamento = 7.5;
+
+
+
+    }
+    public void setHumano() {
+        modAtributos = 1;
+        pontosdevida = 10; // BASE: um 1d10 + modCON
+        profArmasSimples = true; // todo true = todas, e false = nenhuma.
+        profArmasMarciais = true;
+        profArmaduras = true;
+        profEscudos = true;
+        profFerramentas = false;
+    }
+    public void setElfo() {
+
+    }
+    public void setMeioElfo() {
+
+    }
+    public void setTiefling() {
+
+    }
+    public void setDraconato() {
+
+    }
+    public void setMeioOrc() {
+
+    }
+    public void setHalfling() {
+
+    }
+    public void setGnomo() {
+
     }
 
     // Metodos SET -----------------------
@@ -52,7 +100,7 @@ public class fichaDePersonagem {
         this.INT = INT;
         this.SAB = SAB;
         this.CAR = CAR;
-    }  
+    }
     public void setAtributosComDados(){
         // Gerar 4 valores pseudo-randomicos, pegar os 3 maiores e soma-los
         // podemos até usar uma stack para fazer essa operacao
@@ -61,7 +109,7 @@ public class fichaDePersonagem {
     }
 
     // Metodos GET -----------------------
-    public fichaDePersonagem getAtributos(){
+    public FichaModel getAtributos(){
         return this; // na teoria eu so preciso mandar os valores dos atributos em vez do objeto inteiro, mas eu nao sei como...
     }
     public String getRaca(){
