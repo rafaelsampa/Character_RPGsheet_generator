@@ -3,14 +3,14 @@ package entities;
 
 public class Habilidades {
     int[] modifAtrib; // Aumento no valor de Habilidade (os Atributos).
-    public String[] habilidades; // Lista de Habilidades Nativas do Personagem. Ex; (Visao no Escuro, Resistencias).
-    public int deslocamento; // O quanto o personagem pode se mover em 1 turno (em metros).
+    private String[] habilidades; // Lista de Habilidades Nativas do Personagem. Ex; (Visao no Escuro, Resistencias).
+    private int deslocamento; // O quanto o personagem pode se mover em 1 turno (em metros).
 
     // Essa parte vai ser complicada, melhor deixar para o final
-    public String[] magicas;
-    public String[] truques;
+    private String[] magicas;
+    private String[] truques;
 
-    public void habilidades() {
+    public Habilidades(){
         
     }
 

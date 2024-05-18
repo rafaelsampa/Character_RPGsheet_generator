@@ -1,8 +1,8 @@
 package entities;
 
-import model.FichaModel;
 
-public class Racas extends FichaModel { // Ja to comecando a desistir dessa tbm, sera queé realmente util? (martins se n entender do que eu to falando vai para a "classes.java")
+
+public class Racas { // Ja to comecando a desistir dessa tbm, sera queé realmente util? (martins se n entender do que eu to falando vai para a "classes.java")
     private String nomeRaca;
     private int pontosdevida, dadoVida, modAtributos;
     private boolean[] pericias; // Numero possiveis(a depender da raca) para escolher pericias.
@@ -14,6 +14,10 @@ public class Racas extends FichaModel { // Ja to comecando a desistir dessa tbm,
     private boolean tstFOR, tstCON; // Porque?
 
     public void setAnao() {
+        modAtributos = 2;
+        //setCON(modAtributos);
+
+        
 
     }
     public void setHumano() {
