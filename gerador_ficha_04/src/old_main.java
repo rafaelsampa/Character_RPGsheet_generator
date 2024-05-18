@@ -1,3 +1,7 @@
+// // AVISO ===========
+// // Antiga versão do projeto que era uma command line interface bem "simples" mas desistimos no meio para usar e explorar java swing e arquivos em java.
+
+
 // import java.util.Random;
 // import java.io.Console;
 
@@ -6,12 +10,12 @@
 
 // import view.FichaGUI;
 // import controller.FichaController;
-// import model.FichaModel;
+// import model.Ficha;
 // import entities.*;
 
 
 
-// public class principal {
+// public class old_main {
 //     public static void main(String[] args) {
 //         int FOR, DES, CON, INT, SAB, CAR;
 //         int optRacas, optClasses;

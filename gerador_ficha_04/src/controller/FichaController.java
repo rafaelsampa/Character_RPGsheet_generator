@@ -21,13 +21,43 @@ public class FichaController {
         this.NovaFichaGUI = NovaFichaGUI;
     }
 
-    public void itemSelecionado(ItemEvent x){
+    public void itemSelecionado_setCaracteristicas_dePersonagem(ItemEvent x){
         if(x.getStateChange() == ItemEvent.SELECTED){
-            
-            String itemSelecionado = (String) x.getItem();
-            System.out.println("\nFoi selecionado " + itemSelecionado);
-            System.out.println( "\n__________________\n");
 
+            String itemSelecionado = (String) x.getItem();
+            // System.out.println("\nFoi selecionado " + itemSelecionado);
+            // System.out.println( "\n__________________\n");
+
+            switch (itemSelecionado) {
+                // Cada metodo desse vai usar um set de acordo com as especificacoes de Raca, Classe ou Antecedentes, tiradas do livro ofical de DeD
+                case "Anão":
+                    
+                    break;
+                case "Elfo":
+                    
+                    break;
+                case "Halfling":
+
+                    break;
+                case "Humano": 
+                    
+                    break;
+                case "Draconato":
+
+                    break;
+                case "Gnomo":
+
+                    break;
+                case "Meio-Elfo":
+
+                    break;
+                case "Meio-Orc":
+
+                    break;
+                case "Tiefling":
+
+                    break;
+            }
         }
     }
     

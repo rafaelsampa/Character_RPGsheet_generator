@@ -127,10 +127,10 @@ public class FichaGUI extends JFrame{
 
     public void setController(FichaController controller) {
         this.controller = controller;
-        combo.addItemListener(e2 -> controller.itemSelecionado(e2));
-        combo2.addItemListener(e3 -> controller.itemSelecionado(e3));
-        combo3.addItemListener(e4 -> controller.itemSelecionado(e4));
-        confirmbotao.addItemListener(e5 -> controller.itemSelecionado(e5));
+        combo.addItemListener(e2 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e2));
+        combo2.addItemListener(e3 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e3));
+        combo3.addItemListener(e4 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e4));
+        confirmbotao.addItemListener(e5 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e5));
     }
     
 }
