@@ -17,7 +17,8 @@ public class actual_main {
         FichaGUI InterfaceView = new FichaGUI();
         FichaController CentralController = new FichaController(FichaModel, InterfaceView);
 
-        InterfaceView.setController(CentralController); // Estabeleci a conectao do view para ouvir as acoes do controller
+        InterfaceView.setControllerInfos(CentralController); // Estabeleci a conectao do view para ouvir as acoes do controller
+        InterfaceView.setControllerAtributos(CentralController); // Estabeleci a conectao do view para ouvir as acoes do controller
 
         InterfaceView.setVisible(true);
     }

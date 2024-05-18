@@ -43,14 +43,26 @@ public class Ficha {
         
     }
 
+    // SETs RACAS ---------------------------------
     public void setAnao() {
-        // Zerar modificadores, e bases. Antes de setar.
-        
+        // Habiliades:
+        // - Visao no Escuro
+        // - Resiliencia Anã
+        // - Treinamento de Anão em Combate
+
         this.CON = this.CON + 2;
         this.deslocamento = 7.5;
+        profArmasSimples = true; // *
+        profArmasMarciais = true; // *
+        profFerramentas = true; // *
 
     }
+    public void setElfo() {
 
+    }
+    public void setHalfling() {
+
+    }
     public void setHumano() {
         modAtributos = 1;
         pontosdevida = 10; // BASE: um 1d10 + modCON
@@ -60,29 +72,100 @@ public class Ficha {
         profEscudos = true;
         profFerramentas = false;
     }
-    public void setElfo() {
-
-    }
-    public void setMeioElfo() {
-
-    }
-    public void setTiefling() {
-
-    }
     public void setDraconato() {
-
-    }
-    public void setMeioOrc() {
-
-    }
-    public void setHalfling() {
 
     }
     public void setGnomo() {
 
     }
+    public void setMeioElfo() {
 
-    // Metodos SET -----------------------
+    }
+    public void setMeioOrc() {
+
+    }
+    public void setTiefling() {
+
+    }
+    // SETs CLASSES ---------------------------------
+    public void setBarbaro() {
+
+    }
+    public void setBardo() {
+    
+    }
+    public void setBruxo() {
+
+    }
+    public void setClerigo() {
+
+    }
+    public void setDruida() {
+
+    }
+    public void setFeiticeiro() {
+    
+    }
+    public void setGuerreiro() {
+
+    }
+    public void setLadino() {
+   
+    }
+    public void setMago() {
+    
+    }
+    public void setMonge() {
+    
+    }
+    public void setPaladino() {
+
+    }
+    public void setPatrulheiro() {
+
+    }
+
+    // SETs ANTECEDENTES ---------------------------------
+    public void setAcolito(){
+
+    }
+    public void setArtesaoDeGuilda(){
+    
+    }
+    public void setArtista(){
+    
+    }
+    public void setCharlatao(){
+
+    }
+    public void setCriminoso(){
+
+    }
+    public void setEremita(){
+
+    }
+    public void setForasteiro(){
+
+    }
+    public void setHeroiDoPovo(){
+
+    }
+    public void setMarinheiro(){
+    
+    }
+    public void setNobre(){
+    
+    }
+    public void setOrfao(){
+
+    }
+    public void setSabio(){
+
+    }
+    public void setSoldado(){
+
+    }
+
     public void setInfoDoPersonagem(String classe, String raca, String antecedentes){
         this.classe = classe;
         this.raca = raca;
@@ -98,18 +181,12 @@ public class Ficha {
         this.FOR = FOR;
         this.DES = DES;
         this.CON = CON;
-        this.INT = INT;
+        this.INT = INT; 
         this.SAB = SAB;
         this.CAR = CAR;
     }
-    public void setAtributosComDados(){
-        // Gerar 4 valores pseudo-randomicos, pegar os 3 maiores e soma-los
-        // podemos até usar uma stack para fazer essa operacao
-        // repetir isso 6 vezes e armazenar esses valores
-        // Distribuir esses valores para cada atributo
-    }
 
-    // Metodos GET -----------------------
+
     public Ficha getAtributos(){
         return this; // na teoria eu so preciso mandar os valores dos atributos em vez do objeto inteiro, mas eu nao sei como...
     }
@@ -123,7 +200,7 @@ public class Ficha {
         return this.nomeDoJogador;
     }
   
-    // Metodos Auxiliares
+    // Metodos Auxiliares para testes temporarios (Ddeseletar antes da entrega final)
     public void diplayFicha(){
         System.out.print("\nNome do Personagem: "+ nomeDoPersonagem); System.out.print("\tNome do Jogador: "+ nomeDoJogador);
         System.out.print("Classe & Nivel: "+ classe); System.out.print(", "+ nivel); System.out.print("\tAntecedentes: "+ antecedentes+"\n");
