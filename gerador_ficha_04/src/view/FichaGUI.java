@@ -11,20 +11,16 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Rectangle;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
@@ -34,26 +30,8 @@ public class FichaGUI extends JFrame{
     private JComboBox combo;
     private JComboBox combo2;
     private JComboBox combo3;
-    private JComboBox comboFOR;
-    private JComboBox comboDES;
-    private JComboBox comboCON;
-    private JComboBox comboINT;
-    private JComboBox comboSAB;
-    private JComboBox comboCAR;
+    private JComboBox comboAtribo;
 
-
-
-    private JPanel infoInput;
-    private JPanel nomeJogador;
-    private JPanel nomeJogadorInput;
-    private JPanel nomePerso;
-    private JPanel nomePersoInput;
-    private JPanel infoRaca;
-    private JPanel infoRacaInput;
-    private JPanel infoClasse;
-    private JPanel infoClasseInput;
-    private JPanel infoAntec;
-    private JPanel infoAntecInput;
     private JLabel blocoEscrita1;
     private JLabel blocoEscrita2;
     private JTextField campoTexto;
@@ -118,7 +96,7 @@ public class FichaGUI extends JFrame{
         combo = new JComboBox(Racas);
         combo.setBounds(250, 140, 120, 22);
         combo.setPreferredSize(new Dimension(150, 22));
-        combo.addItemListener(e -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e));
+        combo.addItemListener(e -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e, null, null));
         this.getContentPane().add(combo);
         
 
@@ -131,7 +109,7 @@ public class FichaGUI extends JFrame{
         combo2 = new JComboBox(classes);
         combo2.setBounds(260, 180, 120, 22);
         combo2.setPreferredSize(new Dimension(150, 22));
-        combo.addItemListener(e2 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e2));
+        combo2.addItemListener(e2 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e2, null, null));
         this.getContentPane().add(combo2);
 
        
@@ -143,7 +121,7 @@ public class FichaGUI extends JFrame{
         combo3 = new JComboBox(antecendentes);
         combo3.setBounds(300, 220, 140, 22);
         combo3.setPreferredSize(new Dimension(150, 22));
-        combo3.addItemListener(e3 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e3));
+        combo3.addItemListener(e3 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e3, null, null));
         this.getContentPane().add(combo3);
 
         JLabel Atribs = new JLabel();
@@ -156,22 +134,22 @@ public class FichaGUI extends JFrame{
         forca.setText("FORCA: ");
         forca.setBounds(20, 300, 80, 16);
         this.getContentPane().add(forca);
-        comboFOR = new JComboBox(atributos);
-        comboFOR.setBounds(100, 300, 100, 22);
-        comboFOR.setPreferredSize(new Dimension(100, 22));
-        comboFOR.addItemListener(e4 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e4));
+        comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 300, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(e4 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e4, atributos, comboAtribo));
 
-        this.getContentPane().add(comboFOR);
+        this.getContentPane().add(comboAtribo);
 
         JLabel destreza = new JLabel();
         destreza.setText("DESTREZA: ");
         destreza.setBounds(20, 320, 80, 16);
         this.getContentPane().add(destreza);
-        comboDES = new JComboBox(atributos);
-        comboDES.setBounds(100, 320, 100, 22);
-        comboDES.setPreferredSize(new Dimension(100, 22));
-        comboDES.addItemListener(eDES -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eDES));
-        this.getContentPane().add(comboDES);
+        //comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 320, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(eDES -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eDES, atributos, comboAtribo));
+        this.getContentPane().add(comboAtribo);
 
 
 
@@ -179,41 +157,41 @@ public class FichaGUI extends JFrame{
         constituicao.setText("CONSTITUICÃO: ");
         constituicao.setBounds(20, 340, 80, 16);
         this.getContentPane().add(constituicao);
-        comboCON = new JComboBox(atributos);
-        comboCON.setBounds(100, 340, 100, 22);
-        comboCON.setPreferredSize(new Dimension(100, 22));
-        comboCON.addItemListener(eCON -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCON));
-        this.getContentPane().add(comboCON);
+        //comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 340, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(eCON -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCON, atributos, comboAtribo));
+        this.getContentPane().add(comboAtribo);
 
         JLabel inteligencia = new JLabel();
         inteligencia.setText("INTELIGÊNCIA: ");
         inteligencia.setBounds(20, 360, 80, 16);
         this.getContentPane().add(inteligencia);
-        comboINT = new JComboBox(atributos);
-        comboINT.setBounds(100, 360, 100, 22);
-        comboINT.setPreferredSize(new Dimension(100, 22));
-        comboINT.addItemListener(eINT -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eINT));
-        this.getContentPane().add(comboINT);
+        //comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 360, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(eINT -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eINT, atributos, comboAtribo));
+        this.getContentPane().add(comboAtribo);
 
         JLabel sabedoria = new JLabel();
         sabedoria.setText("SABEDORIA: ");
         sabedoria.setBounds(20, 380, 80, 16);
         this.getContentPane().add(sabedoria);
-        comboSAB = new JComboBox(atributos);
-        comboSAB.setBounds(100, 380, 100, 22);
-        comboSAB.setPreferredSize(new Dimension(100, 22));
-        comboSAB.addItemListener(eSAB -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eSAB));
-        this.getContentPane().add(comboSAB);
+        //comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 380, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(eSAB -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eSAB, atributos, comboAtribo));
+        this.getContentPane().add(comboAtribo);
 
         JLabel carisma = new JLabel();
         carisma.setText("CARISMA: ");
         carisma.setBounds(20, 400, 80, 16);
         this.getContentPane().add(carisma);
-        comboCAR = new JComboBox(atributos);
-        comboCAR.setBounds(100, 400, 100, 22);
-        comboCAR.setPreferredSize(new Dimension(100, 22));
-        comboCAR.addItemListener(eCAR -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCAR));
-        this.getContentPane().add(comboCAR);
+        //comboAtribo = new JComboBox(atributos);
+        comboAtribo.setBounds(100, 400, 100, 22);
+        comboAtribo.setPreferredSize(new Dimension(100, 22));
+        comboAtribo.addItemListener(eCAR -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCAR, atributos, comboAtribo));
+        this.getContentPane().add(comboAtribo);
 
 
 
@@ -237,7 +215,7 @@ public class FichaGUI extends JFrame{
         confirmbotao = new JButton();
         confirmbotao.setText("Confirmar");
         confirmbotao.setBounds(780, 640, 85, 20);
-        confirmbotao.addItemListener(e0 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e0));
+        confirmbotao.addItemListener(e0 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e0, null, null));
         this.getContentPane().add(confirmbotao);
 
     }
@@ -245,21 +223,17 @@ public class FichaGUI extends JFrame{
 
     public void setControllerAtributos(FichaController controller){
         this.controller = controller;
-        comboFOR.addItemListener(eFOR -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eFOR));
-        comboDES.addItemListener(eDES -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eDES));
-        comboCON.addItemListener(eCON -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCON));
-        comboINT.addItemListener(eINT -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eINT));
-        comboSAB.addItemListener(eSAB -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eSAB));
-        comboCAR.addItemListener(eCAR -> controller.itemSelecionado_setCaracteristicas_dePersonagem(eCAR));
+        comboAtribo.addItemListener(e -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e, atributos, comboAtribo));
+        comboAtribo = controller.setCombo(comboAtribo);
     }
 
     public void setControllerInfos(FichaController controller) {
         this.controller = controller;
-        combo.addItemListener(e -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e));
-        combo2.addItemListener(e2 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e2));
-        combo3.addItemListener(e3 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e3));
+        // combo.addItemListener(e -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e, atributos, combo));
+        // combo2.addItemListener(e2 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e2, atributos, combo2));
+        // combo3.addItemListener(e3 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e3, atributos, combo3));
 
-        confirmbotao.addItemListener(e0 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e0));
+        confirmbotao.addItemListener(e0 -> controller.itemSelecionado_setCaracteristicas_dePersonagem(e0, null, null));
     }
     
 }
